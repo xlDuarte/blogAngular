@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Bem vindo ao meu blogPessoal!';
-  idade = "T39";
+
+  constructor(
+    public auth: AuthService
+  ){}
+
 }
