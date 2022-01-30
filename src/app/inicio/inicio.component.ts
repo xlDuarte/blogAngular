@@ -18,13 +18,17 @@ import { TemaService } from '../service/tema.service';
 export class InicioComponent implements OnInit {
 
   tema: Tema = new Tema()
-  postagem: Postagem = new Postagem()
-  user: User = new User()
-
-  idUser = environment.id
   listaTemas: Tema[]
-  listaPostagens: Postagem[]
   idTema: number
+
+  postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
+
+  user: User = new User()
+  idUser = environment.id
+  
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
